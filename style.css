@@ -1,0 +1,132 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: #ffffff;
+    width: 400px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form */
+.form-control {
+    margin-bottom: 15px;
+}
+
+.form-input,
+.form-input-filter {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-input:focus,
+.form-input-filter:focus {
+    border-color: #4e73df;
+    outline: none;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #4e73df;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2e59d9;
+}
+
+/* Filter */
+.filter {
+    margin: 15px 0;
+}
+
+/* List */
+.items {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    background: #f8f9fc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Remove button */
+.btn-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.text-red {
+    color: #e74a3b;
+}
+
+.text-red:hover {
+    color: #c0392b;
+}
+
+/* Clear button */
+.btn-clear {
+    width: 100%;
+    padding: 10px;
+    background: #e74a3b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-clear:hover {
+    background: #c0392b;
+}
