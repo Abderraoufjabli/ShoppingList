@@ -1,30 +1,52 @@
-
+const itemForm = document.getElementById('item-form');
 const itemList = document.getElementById('item-list');
 const itemInput = document.getElementById('item-input');
-const itemForm = document.getElementById('item-form');
 
-console.dir(itemForm);
+// function creation button
 
-itemForm.addEventListener('submit', addItem);
+function createButton(classes){
+    const button = document.createElement('button');
+    button.className=classes;
+    const icon = createIcon('fa-solid fa-xmark');
+    button.appendChild(icon);
+    return button;
 
-function addItem(e) {
-    e.preventDefault();
+}
+//function creation icon
 
-    const newItem = itemInput.value.trim();
+function createIcon(classes){
+    const icon = document.createElement('i');
+    icon.className=classes;
+    return icon;   
 
-    if (newItem !== '') {
-        const li = document.createElement('li');
-        li.textContent = newItem;
-        itemList.appendChild(li);
-        itemInput.value = '';
-        const button = document.createElement('button');
-        button.className = 'remove-item btn-link text-red';
-        button.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-        li.appendChild(button);
-
-    }
 }
 
 
 
+
+
+function addItem(e) {
+
+    e.preventDefault();
+    const newItem = itemInput.value;
+
+    // validate Input 
+    if(newItem === ''){
+        alert('Please add an item');
+        return
+    }
+
+    const li = document.createElement('li');
+    const text = document.createTextNode(newItem);
+    const button = createButton('remove-item btn-link text-red');
+    li.appendChild(text);
+    li.appendChild(button);
+    itemList.appendChild(li);
+    itemInput.value = '';    
+
+}
+
+// Event Listeners 
+
+itemForm.addEventListener('submit',addItem);
 
